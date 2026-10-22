@@ -1,0 +1,8 @@
+{
+  "name": "Ruqyah — Scholastic Archive & Systems Laboratory",
+  "description": "Clear tutorials in distributed systems, classical scholarship, and verified Qur'anic tools engineered for quiet reflection. Zero trackers, zero client telemetry, and built for permanent offline reading.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

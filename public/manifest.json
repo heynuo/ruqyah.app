@@ -1,0 +1,48 @@
+{
+  "name": "Ruqyah — Scholastic Archive & Systems Laboratory",
+  "short_name": "Ruqyah",
+  "description": "Clear tutorials in distributed systems, disciplined theological inquiry, and verified Qur'anic tools engineered for quiet reflection. Zero trackers, zero client telemetry, and built for offline permanence.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAFAF7",
+  "theme_color": "#005c55",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Holy Qur'an Library",
+      "short_name": "Qur'an",
+      "description": "114 Surahs with recitation and PDF downloads",
+      "url": "./quran.html",
+      "icons": [{ "src": "assets/icons/quran.png", "sizes": "96x96", "type": "image/png" }]
+    },
+    {
+      "name": "108 Master Verses",
+      "short_name": "108 Verses",
+      "description": "Scholarly concordance with roots, transliteration & tafsir",
+      "url": "./quran-verses.html",
+      "icons": [{ "src": "assets/icons/open-book.png", "sizes": "96x96", "type": "image/png" }]
+    },
+    {
+      "name": "About Ruqyah",
+      "short_name": "About",
+      "description": "Scholarly mission, author background & technical colophon",
+      "url": "./about.html",
+      "icons": [{ "src": "assets/icons/sparkles.png", "sizes": "96x96", "type": "image/png" }]
+    }
+  ]
+}

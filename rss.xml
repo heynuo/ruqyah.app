@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruqyah — Scholastic Archive &amp; Systems Laboratory</title>
+    <link>https://heynuo.github.io/</link>
+    <description>Fast, tracker-free personal knowledge base featuring Java OOP, web development guides, authentic Islamic research, and complete Quran sanctuary.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://heynuo.github.io/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Master Compilation of 108 Quranic Verses (13-Page PDF Publication)</title>
+      <link>https://heynuo.github.io/quran-verses.html</link>
+      <guid isPermaLink="true">https://heynuo.github.io/quran-verses.html</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Scholarly cross-referenced master compilation of 108 unique Quranic verse references extracted across 62 books, covering 44 Surahs in canonical order.</description>
+      <category>Islamic Research</category>
+    </item>
+
+    <item>
+      <title>The Holy Quran Library — Complete 114 Surahs &amp; Authentic PDF Downloads</title>
+      <link>https://heynuo.github.io/quran.html</link>
+      <guid isPermaLink="true">https://heynuo.github.io/quran.html</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Continuous recitation of all 114 Surahs by world-renowned Qaris with authentic King Fahd Madinah Mushaf, Tajweed, and translation PDF downloads.</description>
+      <category>Islamic Research</category>
+    </item>
+
+  </channel>
+</rss>

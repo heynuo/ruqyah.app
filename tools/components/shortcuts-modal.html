@@ -1,0 +1,106 @@
+  <!-- Keyboard Shortcuts Modal & Command Palette (WCAG 2.1.4 compliant) -->
+  <div id="searchModal" class="hidden fixed inset-0 z-[90] bg-on-surface/40 backdrop-blur-sm flex items-start justify-center pt-20 px-4" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle" aria-hidden="true">
+    <div class="w-full max-w-xl bg-surface rounded-xl border border-border-strong/30 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      <div class="flex items-center px-4 border-b border-border-subtle bg-bg-canvas/50">
+        <svg class="w-4 h-4 stroke-current text-primary mr-3" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20L16 16"></path></svg>
+        <input id="searchModalInput" type="text" placeholder="Search documentation, articles, surahs..." class="w-full py-3.5 bg-transparent border-0 focus:outline-none focus:ring-0 text-on-surface text-sm font-ui-interactive" autocomplete="off" spellcheck="false">
+        <kbd class="px-2 py-0.5 rounded text-[10px] font-code-mono bg-surface border border-border-subtle text-on-surface-variant">Esc</kbd>
+      </div>
+
+      <div id="searchResultsList" class="p-3 max-h-96 overflow-y-auto space-y-1">
+        <div id="searchModalTitle" class="px-2 py-1 text-[10px] font-code-mono uppercase tracking-wider text-on-surface-variant font-semibold">Suggested Entries</div>
+        
+        <a href="quran-verses.html" class="search-result-item flex items-center justify-between p-2 rounded hover:bg-surface-container transition-colors">
+          <div class="flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center text-primary text-xs font-code-mono">01</span>
+            <span class="text-xs font-medium text-on-surface">108 Master Verses Concordance</span>
+          </div>
+          <span class="text-[10px] font-code-mono text-on-surface-variant">Corpus</span>
+        </a>
+        <a href="quran.html" class="search-result-item flex items-center justify-between p-2 rounded hover:bg-surface-container transition-colors">
+          <div class="flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center text-primary text-xs font-code-mono">02</span>
+            <span class="text-xs font-medium text-on-surface">Qur’an Recitation Engine (114 Surahs)</span>
+          </div>
+          <span class="text-[10px] font-code-mono text-on-surface-variant">Audio Engine</span>
+        </a>
+        <a href="about.html" class="search-result-item flex items-center justify-between p-2 rounded hover:bg-surface-container transition-colors">
+          <div class="flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center text-primary text-xs font-code-mono">03</span>
+            <span class="text-xs font-medium text-on-surface">About Zahiruddin &amp; Ruqyah Editorial Mission</span>
+          </div>
+          <span class="text-[10px] font-code-mono text-on-surface-variant">Editorial</span>
+        </a>
+      </div>
+
+      <div class="px-4 py-2 border-t border-border-subtle bg-bg-canvas/50 flex items-center justify-between text-[11px] font-code-mono text-on-surface-variant">
+        <span>Type to filter • Press Esc to close</span>
+        <span>⌘K / Ctrl+K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal (WCAG 2.1.4 compliant) -->
+  <div id="shortcutsModal" class="hidden fixed inset-0 z-[95] bg-on-surface/40 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="shortcutsTitle" aria-hidden="true">
+    <div class="w-full max-w-lg bg-surface rounded-xl border border-border-strong/30 shadow-2xl p-6 relative">
+      <div class="flex items-center justify-between pb-4 mb-4 border-b border-border-subtle">
+        <div class="flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">⌨</div>
+          <h3 id="shortcutsTitle" class="font-subheading-card text-base font-bold text-on-surface">Keyboard Shortcuts</h3>
+        </div>
+        <button id="closeShortcutsBtn" aria-label="Close shortcuts modal" class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors cursor-pointer" type="button">
+          ✕
+        </button>
+      </div>
+
+      <!-- Single-key shortcut toggle for accessibility -->
+      <div class="p-3 mb-4 rounded-lg bg-surface-container-low border border-primary/20 flex items-center justify-between text-xs">
+        <div>
+          <span class="font-semibold text-on-surface block">Single-Key Shortcuts</span>
+          <span class="text-on-surface-variant text-[11px]">Enable letters like T, H, A, C without Ctrl</span>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="toggleSingleShortcuts" class="sr-only peer" checked>
+          <div class="w-9 h-5 bg-surface-container rounded-full peer peer-checked:bg-primary peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+        </label>
+      </div>
+
+      <div class="space-y-3 max-h-72 overflow-y-auto text-xs font-ui-interactive">
+        <div class="space-y-1.5">
+          <div class="text-[10px] font-code-mono uppercase tracking-wider text-on-surface-variant font-semibold">General Navigation</div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Search &amp; Command Palette</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">Ctrl + K</kbd>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Toggle Light / Sepia / Dark Theme</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">T</kbd>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Open Shortcuts Help</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">?</kbd>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Close Dialogs &amp; Overlays</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">Esc</kbd>
+          </div>
+        </div>
+
+        <div class="space-y-1.5 pt-2">
+          <div class="text-[10px] font-code-mono uppercase tracking-wider text-on-surface-variant font-semibold">Audio &amp; Quran Player</div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Play / Pause Audio</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">Space</kbd>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Previous / Next Ayah</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">← / →</kbd>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-border-subtle/50">
+            <span class="text-on-surface">Minimize / Restore Audio Bar</span>
+            <kbd class="px-2 py-0.5 rounded bg-surface-container border border-border-subtle font-code-mono text-[10px]">V</kbd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

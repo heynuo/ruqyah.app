@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+}
+
+html {
+  scrollbar-width: none;
+}
+::-webkit-scrollbar { display: none; }
+
+/* Theme tokens as CSS variables */
+:root {
+  --color-bg-canvas: 250 250 247;
+  --color-surface: 255 255 255;
+  --color-surface-container: 226 241 237;
+  --color-surface-container-low: 232 247 243;
+  --color-surface-container-high: 220 235 232;
+  --color-surface-container-highest: 215 230 226;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-variant: 215 230 226;
+  --color-surface-dim: 206 221 218;
+  --color-surface-bright: 238 253 249;
+  --color-surface-tint: 0 106 99;
+  --color-on-surface: 17 30 28;
+  --color-on-surface-variant: 62 73 71;
+  --color-primary: 0 92 85;
+  --color-primary-container: 15 118 110;
+  --color-on-primary: 255 255 255;
+  --color-on-primary-container: 163 250 239;
+  --color-primary-fixed: 156 242 232;
+  --color-primary-fixed-dim: 128 213 203;
+  --color-on-primary-fixed: 0 32 29;
+  --color-on-primary-fixed-variant: 0 80 74;
+  --color-inverse-primary: 128 213 203;
+  --color-secondary: 82 97 94;
+  --color-secondary-container: 211 227 223;
+  --color-on-secondary-container: 87 102 99;
+  --color-secondary-fixed: 214 230 226;
+  --color-secondary-fixed-dim: 186 202 198;
+  --color-on-secondary-fixed: 16 30 28;
+  --color-on-secondary-fixed-variant: 59 74 71;
+  --color-tertiary: 137 57 6;
+  --color-tertiary-container: 168 80 31;
+  --color-on-tertiary-container: 255 229 218;
+  --color-tertiary-fixed: 255 219 203;
+  --color-tertiary-fixed-dim: 255 182 147;
+  --color-on-tertiary-fixed: 52 16 0;
+  --color-on-tertiary-fixed-variant: 122 48 0;
+  --color-border-subtle: 226 232 240;
+  --color-border-strong: 119 136 132;
+  --color-outline: 110 121 119;
+  --color-outline-variant: 189 201 198;
+  --color-inverse-surface: 38 51 49;
+  --color-inverse-on-surface: 229 244 240;
+  --color-success: 4 120 87;
+  --color-danger: 180 35 24;
+  --color-error: 186 26 26;
+  --color-error-container: 255 218 214;
+  --color-on-error-container: 147 0 10;
+}
+
+html.dark, [data-theme="dark"] {
+  --color-bg-canvas: 11 18 32;
+  --color-surface: 17 26 46;
+  --color-surface-container: 22 34 59;
+  --color-surface-container-low: 19 30 51;
+  --color-surface-container-high: 30 45 74;
+  --color-surface-container-highest: 38 56 92;
+  --color-surface-container-lowest: 14 22 39;
+  --color-surface-variant: 30 45 74;
+  --color-surface-dim: 15 23 42;
+  --color-surface-bright: 26 40 68;
+  --color-surface-tint: 45 212 191;
+  --color-on-surface: 230 237 243;
+  --color-on-surface-variant: 159 176 195;
+  --color-primary: 45 212 191;
+  --color-primary-container: 15 95 88;
+  --color-on-primary: 4 32 28;
+  --color-on-primary-container: 230 255 249;
+  --color-primary-fixed: 45 212 191;
+  --color-primary-fixed-dim: 31 179 160;
+  --color-on-primary-fixed: 4 32 28;
+  --color-on-primary-fixed-variant: 15 95 88;
+  --color-inverse-primary: 0 92 85;
+  --color-secondary: 186 202 198;
+  --color-secondary-container: 59 74 71;
+  --color-on-secondary-container: 214 230 226;
+  --color-secondary-fixed: 214 230 226;
+  --color-secondary-fixed-dim: 186 202 198;
+  --color-on-secondary-fixed: 16 30 28;
+  --color-on-secondary-fixed-variant: 59 74 71;
+  --color-tertiary: 255 182 147;
+  --color-tertiary-container: 122 48 0;
+  --color-on-tertiary-container: 255 219 203;
+  --color-tertiary-fixed: 255 219 203;
+  --color-tertiary-fixed-dim: 255 182 147;
+  --color-on-tertiary-fixed: 52 16 0;
+  --color-on-tertiary-fixed-variant: 122 48 0;
+  --color-border-subtle: 36 53 80;
+  --color-border-strong: 91 107 128;
+  --color-outline: 91 107 128;
+  --color-outline-variant: 59 74 71;
+  --color-inverse-surface: 229 244 240;
+  --color-inverse-on-surface: 38 51 49;
+  --color-success: 52 211 153;
+  --color-danger: 253 162 155;
+  --color-error: 255 180 171;
+  --color-error-container: 147 0 10;
+  --color-on-error-container: 255 218 214;
+}
+
+html.sepia, [data-theme="sepia"] {
+  --color-bg-canvas: 244 236 216;
+  --color-surface: 251 245 230;
+  --color-surface-container: 240 230 205;
+  --color-surface-container-low: 245 238 218;
+  --color-surface-container-high: 235 224 198;
+  --color-surface-container-highest: 228 218 192;
+  --color-surface-container-lowest: 251 245 230;
+  --color-surface-variant: 235 224 198;
+  --color-surface-dim: 228 218 192;
+  --color-surface-bright: 251 245 230;
+  --color-surface-tint: 110 65 25;
+  --color-on-surface: 60 42 20;
+  --color-on-surface-variant: 90 70 45;
+  --color-primary: 137 57 6;
+  --color-primary-container: 168 80 31;
+  --color-on-primary: 255 255 255;
+  --color-on-primary-container: 255 229 218;
+  --color-border-subtle: 225 212 185;
+  --color-border-strong: 160 135 100;
+}
+
+.bg-bg-canvas { background-color: rgb(var(--color-bg-canvas)); }
+.bg-surface { background-color: rgb(var(--color-surface)); }
+.bg-surface-container { background-color: rgb(var(--color-surface-container)); }
+.bg-surface-container-low { background-color: rgb(var(--color-surface-container-low)); }
+.bg-surface-container-high { background-color: rgb(var(--color-surface-container-high)); }
+.bg-surface-container-highest { background-color: rgb(var(--color-surface-container-highest)); }
+.bg-primary { background-color: rgb(var(--color-primary)); }
+.bg-primary-container { background-color: rgb(var(--color-primary-container)); }
+
+.text-on-surface { color: rgb(var(--color-on-surface)); }
+.text-on-surface-variant { color: rgb(var(--color-on-surface-variant)); }
+.text-primary { color: rgb(var(--color-primary)); }
+.text-on-primary { color: rgb(var(--color-on-primary)); }
+
+.border-border-subtle { border-color: rgb(var(--color-border-subtle)); }
+.border-border-strong { border-color: rgb(var(--color-border-strong)); }
+.border-primary { border-color: rgb(var(--color-primary)); }
+
+.font-body-article { font-family: 'Inter', sans-serif; }
+.font-title-page { font-family: 'Inter', sans-serif; }
+.font-arabic { font-family: 'Amiri', serif; direction: rtl; }
+.font-code-mono { font-family: 'JetBrains Mono', monospace; }
+
+@keyframes orbitClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orbitCounter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.sacred-orbit-cw {
+  animation: orbitClockwise 50s linear infinite;
+  transform-origin: 60px 60px;
+}
+.sacred-orbit-ccw {
+  animation: orbitCounter 60s linear infinite;
+  transform-origin: 60px 60px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sacred-orbit-cw, .sacred-orbit-ccw {
+    animation: none !important;
+  }
+}
+
